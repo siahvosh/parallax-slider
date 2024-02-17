@@ -11,8 +11,12 @@
 <style>
 
 .card-1{
-  width: 100%;
-  height: 100%;
-  background: red !important;
+  width: 50%;
+  height: 50%;
+  background: black !important;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 </style>
