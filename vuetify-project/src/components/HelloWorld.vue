@@ -1,8 +1,12 @@
 <template>
     <div class="main">
       <div class="card-1">
-      <v-img class="sld1-bg" src="file:///C:/Users/PC/Desktop/vue%20project/parallax-slider/vuetify-project/src/assets/sld1-bg.jpeg" alt=""></v-img>
-      <v-img class="car-cloud" src="file:///C:/Users/PC/Desktop/vue%20project/parallax-slider/vuetify-project/src/assets/carcloud.webp" alt=""></v-img>
+        <v-img class="sld1-bg" src="file:///C:/Users/PC/Desktop/vue%20project/parallax-slider/vuetify-project/src/assets/sld1-bg.jpeg" alt=""></v-img>
+        <v-img class="car-cloud" src="file:///C:/Users/PC/Desktop/vue%20project/parallax-slider/vuetify-project/src/assets/carcloud.webp" alt=""></v-img>
+      </div>
+      <div class="card-2">
+        <v-img class="sld2-bg" src="file:///C:/Users/PC/Desktop/vue%20project/parallax-slider/vuetify-project/src/assets/sld3-bg.webp" alt=""></v-img>
+        <v-img class="land" src="file:///C:/Users/PC/Desktop/vue%20project/parallax-slider/vuetify-project/src/assets/land.webp" alt=""></v-img>
       </div>
     </div>
 
@@ -27,18 +31,20 @@
   flex-direction: column;
 }
 
-.card-1{
+.card-1, .card-2{
   position: relative;
   width: 100%;
   height: 100%;
 }
 
-.sld1-bg{
+.sld1-bg, .sld2-bg{
   object-fit: fill;
   position: absolute !important;
-
   width: 100%;
   height: 100%;
+  overflow: hidden;
+  border: 2px solid red;
+
 }
 .car-cloud{
   position: absolute !important;
@@ -48,5 +54,12 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
+
+}
+
+.land{
+  position: absolute !important;
+  width: 100%;
+  bottom: 0;
 }
 </style>
