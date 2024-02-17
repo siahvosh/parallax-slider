@@ -4,7 +4,7 @@
         <v-img class="sld1-bg" src="file:///C:/Users/PC/Desktop/vue%20project/parallax-slider/vuetify-project/src/assets/sld1-bg.jpeg" alt=""></v-img>
         <v-img class="sld2-bg" src="file:///C:/Users/PC/Desktop/vue%20project/parallax-slider/vuetify-project/src/assets/sld3-bg.webp" alt=""></v-img>
         <v-img class="sld2-bg" src="file:///C:/Users/PC/Desktop/vue%20project/parallax-slider/vuetify-project/src/assets/sld4-bg.webp" alt=""></v-img>
-        <v-img class="sld1-bg" src="file:///C:/Users/PC/Desktop/vue%20project/parallax-slider/vuetify-project/src/assets/sld2-bg.webp" alt=""></v-img>
+        <v-img class="sld2-bg" src="file:///C:/Users/PC/Desktop/vue%20project/parallax-slider/vuetify-project/src/assets/sld2-bg.webp" alt=""></v-img>
       </div>
 <!--      <div class="card-2">-->
 <!--        <v-img class="car-cloud" src="file:///C:/Users/PC/Desktop/vue%20project/parallax-slider/vuetify-project/src/assets/carcloud.webp" alt=""></v-img>-->
@@ -23,16 +23,18 @@
 <style>
 
 .main{
-  width: 100%;
   background: black !important;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
+  width: 100%;
 
+  /*overflow: hidden;*/
+
+}
+.main:hover .sld2-bg{
+  transform: translate(0, 0);
+
+}
+.main:hover .sld1-bg{
+  transform: translate(0, -100%);
 
 }
 
@@ -41,19 +43,28 @@
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: column ;
-  justify-content: initial;
+  flex-direction: column;
+  /*overflow: hidden;*/
+
 
 
 }
 
-.sld1-bg, .sld2-bg{
+.sld1-bg{
   object-fit: fill;
   width: 100%;
-  display: flex;
-  justify-self: center;
+  transform: translate(0, 0);
+  transition: all 1s ease .1s;
+
   /*border: 2px solid red;*/
 
+}
+.sld2-bg{
+  object-fit: fill;
+  width: 100%;
+  position: absolute !important;
+  transform: translate(0, 100%);
+  transition: all 1s ease;
 }
 .car-cloud{
   position: absolute !important;
