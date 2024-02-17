@@ -26,15 +26,35 @@
   background: black !important;
   width: 100%;
 
+
   /*overflow: hidden;*/
 
 }
 .main:hover .sld2-bg{
   transform: translate(0, 0);
+  animation: fade;
+  /*opacity: 1;*/
+}
+
+@keyframes fade {
+  0%{
+    opacity: 0;
+  }
+  20%{
+    opacity: 0;
+  }
+  60%{
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
 
 }
 .main:hover .sld1-bg{
   transform: translate(0, -100%);
+  opacity: .3;
+
 
 }
 
@@ -43,6 +63,7 @@
   width: 100%;
   height: 100%;
   display: flex;
+
   flex-direction: column;
   /*overflow: hidden;*/
 
@@ -53,18 +74,23 @@
 .sld1-bg{
   object-fit: fill;
   width: 100%;
+  margin-top: 80px;
   transform: translate(0, 0);
-  transition: all 1s ease .1s;
+  transition: all 1.5s ease .1s;
+  opacity: 1;
+  z-index: 0 !important;
 
   /*border: 2px solid red;*/
 
 }
 .sld2-bg{
+  opacity: 0;
   object-fit: fill;
   width: 100%;
   position: absolute !important;
   transform: translate(0, 100%);
-  transition: all 1s ease;
+  transition: all 1.5s ease;
+
 }
 .car-cloud{
   position: absolute !important;
